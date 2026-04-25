@@ -127,7 +127,7 @@ def print_and_save(ious: dict, output_path: Path | None) -> None:
             delta = gsam_pct - baseline
             gsam_str = f"{gsam_pct:.2f}"
             delta_str = f"{delta:+.2f}"
-            row = f"{cid:>3}  {name:<25} {gsam_pct:>9.2f}% {baseline*100:>9.2f}%  {delta:>+7.2f}%"
+            row = f"{cid:>3}  {name:<25} {gsam_pct:>9.2f}% {baseline:>9.2f}%  {delta:>+7.2f}%"
             gsam_valid.append(gsam_pct)
             baseline_valid.append(baseline)
         print(row)
