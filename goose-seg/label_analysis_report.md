@@ -1706,3 +1706,38 @@ Classes selected: those with **mIoU ≤ ~39 %** in the current evaluation.
 ### 63 — `military_vehicle` (mIoU 0.00 %)
 
 **No images found in the validation set.**
+
+---
+
+# GOOSE Train — Target Class Presence Report
+
+Scanned **11,834 train label files**.
+
+## Summary
+
+| Class ID | Class Name | Val mIoU (%) | # Train Images | # Train Scenarios | Total Pixels |
+|----------|------------|:------------:|:--------------:|:-----------------:|:------------:|
+| 7 | bikeway | 0.00 | 19 | 4 | 731,310 |
+| 9 | pedestrian_crossing | 0.00 | 0 | 0 | 0 |
+| 18 | moss | 1.70 | 370 | 15 | 13,794,823 |
+| 25 | boom_barrier | 30.67 | 245 | 17 | 1,534,219 |
+| 30 | crops | 20.21 | 646 | 10 | 175,544,747 |
+| 34 | truck | 22.02 | 812 | 28 | 45,608,575 |
+| 35 | on_rails | 0.00 | 26 | 4 | 2,382,179 |
+| 39 | wall | 32.25 | 1,430 | 30 | 41,309,573 |
+| 43 | bridge | 39.01 | 163 | 15 | 19,354,231 |
+| 44 | tunnel | 0.00 | 9 | 3 | 3,518,320 |
+| 45 | pole | 33.22 | 5,602 | 37 | 31,740,881 |
+| 48 | barrier_tape | 36.38 | 256 | 27 | 734,246 |
+| 49 | kick_scooter | 30.04 | 30 | 4 | 42,472 |
+| 55 | wire | 32.12 | 1,940 | 33 | 13,241,620 |
+| 56 | outlier | 0.00 | 1 | 1 | 58 |
+| 61 | pipe | 0.00 | 1 | 1 | 1,852 |
+| 62 | tree_root | 9.17 | 60 | 8 | 1,008,673 |
+| 63 | military_vehicle | 0.00 | 0 | 0 | 0 |
+
+## Notes
+
+- **Val mIoU** is from the closed-set ConvNeXt + Mask2Former baseline.
+- Classes with 0 train images are truly absent from training data; 0% val mIoU is expected.
+- Classes with non-zero train images but 0% val mIoU indicate the model failed to learn them (likely extreme class imbalance or difficult visual appearance).
